@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>remove all</title>
+    <script defer>
+        async function confirmSubmission() {
+            if (window.confirm("Are you sure? WARNING: THIS WILL REMOVE ALL PHOTOS")) {
+                return true;
+            }
+            return false;
+        }
+    </script>
+    <link rel="stylesheet" href="../background.css">
+</head>
+
+<body>
+	<h2>Press remove below to clear all your data</h2>
+    <form action="/removeconfirmation" onsubmit="return confirmSubmission()">
+        <input type="submit" value="Remove All Data"/>
+    </form>
+    <br>
+    <a href="/">Back to home</a>
+</body>
+
+</html>

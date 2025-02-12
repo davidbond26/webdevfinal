@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>select photos</title>
+    <link rel="stylesheet" href="../background.css">
+</head>
+
+<body>
+	Cool photo of <%- dogname %>
+    <br>
+    <div>
+        <img src = "<%- photo %>" name="img" id="img">
+    </div>
+    <form action="/selectphotos" method="post">
+        <input type="text" value= "<%- dogname %>" name="dogname" id="dogname" readonly>
+        <input type="submit" value="Get new photo!">
+    </form>
+    <form action="/photoadded" method="post">
+        <input name="dogname" value= "<%- dogname %>" readonly>
+        <input name="img" value= "<%- photo %>" readonly>
+        <input type="submit" value="Add to favorites!">
+    </form>
+    <br>
+    <div id="status">
+        Status:
+    </div>
+    <br>
+    <a href="/">Back to home</a>
+    <br>
+    <a href="/browse">Select different dog</a>
+</body>
+
+</html>
